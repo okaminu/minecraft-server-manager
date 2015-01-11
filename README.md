@@ -4,7 +4,12 @@ Web application written on Ruby on Rails for minecraft server management
 
 ### What is this repository for? ###
 
-* Management of Minecraft Server, firstly it would start, reboot and stop the server, change the difficulty, show the status of the server (running, stopped), password authentication.
+* Management of Minecraft Server, 
+1) start, reboot and stop the server
+2) change the difficulty
+3) show the status of the server (running, stopped)
+4) password authentication
+5) allow to backup and send the backup to s3
 
 ### How do I get set up? ###
 
