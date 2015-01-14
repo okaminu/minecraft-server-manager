@@ -16,10 +16,6 @@ Web application written on Ruby on Rails for minecraft server management
 * The server must have Ruby with version equal or higher than 1.9.3
 * The server must have Ruby on Rails with version equal or higher than 4.1.1
 
-### Contribution guidelines ###
-
-* There should be rSpec tests written for core features.
-
 ### Who do I talk to? ###
 
 * Author: aurimasdgt@gmail.com
