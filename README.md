@@ -10,6 +10,7 @@ Web application written on Ruby on Rails for minecraft server management
 3) show the status of the server (running, stopped)
 4) password authentication
 5) allow to backup and send the backup to s3
+6) change view-distance
 
 ### How do I get set up? ###
 
