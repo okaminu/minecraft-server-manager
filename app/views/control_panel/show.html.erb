@@ -2,5 +2,6 @@
 <h3>Control Panel</h3>
 <p>This will have server status displayed (running, stopped), allow to change the difficulty,
 and authenticate by password. Also it will show the server name and server logo (loaded from minecraft server of course.)</p>
-<%= link_to 'Stop Server', controller: 'server', action: 'stop' %>
-<%= link_to 'Start Server', controller: 'server', action: 'start' %>
+<%= link_to 'Stop Server', controller: 'server', action: 'stop' %> <br>
+<%= link_to 'Start Server', controller: 'server', action: 'start' %> <br>
+<%= link_to 'Save Settings', controller: 'control_panel', action: 'save' %>

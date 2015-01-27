@@ -1,24 +1,15 @@
 class ControlPanelController < ApplicationController
+
+  def initialize
+    @serverPropertiesLocation = '/Users/mac/Desktop/Aurimas/minecraft/server.properties'
+  end
   def show
-    settingsText = String.new
-    file = File.new '/Users/mac/Desktop/Aurimas/minecraft/server.properties', 'r'
-    while line = file.gets
-      settingsText << line
-    end
-    file.close
+    properties = JavaProperties.load @serverPropertiesLocation
+    properties[:difficulty] = 1
+    JavaProperties.write properties, @serverPropertiesLocation
   end
 
   def save
-    settingsText = String.new
-    file = File.new '/Users/mac/Desktop/Aurimas/minecraft/server.properties', 'r'
-    while line = file.gets
-      settingsText << line
-    end
-    file.close
-
-    settingsText << 'lol'
-    file = File.new '/Users/mac/Desktop/Aurimas/minecraft/server.properties', 'w'
-    file.write settingsText
-    file.close
+    redirectToDefault
   end
 end
