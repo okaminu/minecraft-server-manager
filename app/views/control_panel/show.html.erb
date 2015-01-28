@@ -5,3 +5,16 @@ and authenticate by password. Also it will show the server name and server logo 
 <%= link_to 'Stop Server', controller: 'server', action: 'stop' %> <br>
 <%= link_to 'Start Server', controller: 'server', action: 'start' %> <br>
 <%= link_to 'Save Settings', controller: 'control_panel', action: 'save' %>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Value</th>
+  </tr>
+  <% @properties.each do |propertyKey, propertyValue| %>
+  <tr>
+    <td><%= propertyKey%></td>
+    <td><%= propertyValue%></td>
+    <% end %>
+  </tr>
+</table>
