@@ -9,8 +9,7 @@ class ControlPanelController < ApplicationController
   end
 
   def save
-    properties = JavaProperties.load @serverPropertiesLocation
-    JavaProperties.write properties, @serverPropertiesLocation
+    JavaProperties.write params, @serverPropertiesLocation
     redirectToDefault
   end
 end

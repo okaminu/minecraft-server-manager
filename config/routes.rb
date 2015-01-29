@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'control_panel/show'
-  get 'control_panel/save'
+  post 'control_panel/save'
   get 'server/stop'
   get 'server/start'
 
