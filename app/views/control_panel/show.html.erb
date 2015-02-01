@@ -5,7 +5,6 @@
   course.)</p>
 <%= link_to 'Stop Server', controller: 'server', action: 'stop' %> <br>
 <%= link_to 'Start Server', controller: 'server', action: 'start' %> <br>
-<%= link_to 'Save Settings', controller: 'control_panel', action: 'save' %>
 
 <table border="1">
   <tr>
@@ -13,7 +12,7 @@
     <th>Value</th>
   </tr>
   <%= form_tag(controller: 'control_panel', action: 'save', method: 'post') do %>
-  <% @properties.each do |propertyKey, propertyValue| %>
+  <% @properties_view.each do |propertyKey, propertyValue| %>
       <tr>
         <td><%= label_tag(propertyKey) %></td>
         <td><%= text_field_tag(propertyKey, propertyValue) %></td>
