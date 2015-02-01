@@ -1,0 +1,4 @@
+property_file_location: '/Users/mac/Desktop/Aurimas/minecraft/server.properties'
+editable_server_properties:
+    - view-distance
+    - difficulty

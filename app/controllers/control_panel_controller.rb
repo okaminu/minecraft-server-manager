@@ -1,12 +1,8 @@
 class ControlPanelController < ApplicationController
 
   def initialize
-    # Move these to configuration in /config
-    # See http://richonrails.com/articles/the-rails-4-1-secrets-yml-file
-    property_file_location = '/Users/mac/Desktop/Aurimas/minecraft/server.properties'
-    @editable_properties = [:difficulty, :'view-distance']
-
-    @properties_service = Properties.new(property_file_location)
+    @editable_properties = APP_CONFIG['editable_server_properties'].map{|x| x.to_sym}
+    @properties_service = Properties.new(APP_CONFIG['property_file_location'])
   end
 
   def show
