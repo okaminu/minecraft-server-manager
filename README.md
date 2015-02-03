@@ -11,6 +11,7 @@ Web application written on Ruby on Rails for minecraft server management
 4) password authentication
 5) allow to backup and send the backup to s3
 6) change view-distance
+7) Value validation, don't allow to select easy difficulty
 
 ### How do I get set up? ###
 
