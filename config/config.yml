@@ -1,4 +1,14 @@
-property_file_location: '/Users/mac/Desktop/Aurimas/minecraft/server.properties'
-editable_server_properties:
-    - view-distance
-    - difficulty
+development:
+    property_file_location: '/Users/mac/Desktop/Aurimas/minecraft/server.properties'
+    server_name: 'minecraft_blueskies'
+    restart_duration_in_seconds: 5
+    editable_server_properties:
+        - view-distance
+        - difficulty
+production:
+    property_file_location: '/srv/minecraft/blueskies/server.properties'
+    server_name: 'minecraft_blueskies'
+    restart_duration_in_seconds: 5
+    editable_server_properties:
+        - view-distance
+        - difficulty
