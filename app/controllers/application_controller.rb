@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   protected
   def redirectToDefault
-    redirect_to '/control_panel/show'
+    redirect_to controller:'control_panel', action:'show'
   end
 end
