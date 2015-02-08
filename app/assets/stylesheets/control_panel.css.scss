@@ -1,3 +1,21 @@
-// Place all the styles related to the ControlPanel controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$gray: #f7f7f9;
+$gray-dark: #e1e1e8;
+
+.control_panel {
+  h3 {
+    margin-top: 0;
+  }
+
+  .highlight {
+    background-color: $gray;
+    border: 1px solid $gray-dark;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    padding: 9px 14px;
+  }
+
+  .spacer {
+    margin-top: 20px;
+  }
+}
+

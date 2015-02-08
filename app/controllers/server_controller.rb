@@ -2,17 +2,17 @@ class ServerController < ApplicationController
 
   def stop
     get_server_control.stop
-    redirectToDefault
+    redirect_to_default
   end
 
   def start
     get_server_control.start
-    redirectToDefault
+    redirect_to_default
   end
 
   def restart
     get_server_control.restart
-    redirectToDefault
+    redirect_to_default
   end
 
   private

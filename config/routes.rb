@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   get '/control_panel/show'
   post '/control_panel/save'
-  get '/server/stop'
-  get '/server/start'
+  post '/server/stop'
+  post '/server/start'
+  post '/server/restart'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

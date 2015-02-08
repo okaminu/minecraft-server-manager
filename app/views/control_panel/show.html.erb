@@ -1,29 +1,13 @@
-<h1>Minecraft Server Management (BlueSkies)</h1>
-<h3>Control Panel</h3>
-<p>This will have server status displayed (running, stopped), allow to change the difficulty,
-  and authenticate by password. Also it will show the server name and server logo (loaded from minecraft server of
-  course.)</p>
-<%= link_to 'Stop Server', controller: 'server', action: 'stop' %> <br>
-<%= link_to 'Start Server', controller: 'server', action: 'start' %> <br>
+<div class="container control_panel">
+  <div class="row spacer">
+    <%= render 'shared/info' %>
+    <%= render 'shared/commands' %>
+  </div>
 
-<table border="1" style="margin-top: 30px">
-  <tr>
-    <th>Name</th>
-    <th>Value</th>
-  </tr>
-  <%= form_tag(controller: 'control_panel', action: 'save', method: 'post') do %>
-  <% @properties_view.each do |propertyKey, propertyValue| %>
-      <tr>
-        <td><%= label_tag(propertyKey) %></td>
-        <td><%= text_field_tag(propertyKey, propertyValue) %></td>
-      </tr>
-    <% end %>
-      <tr>
-        <td colspan="2"><%= submit_tag('Submit') %></td>
-      </tr>
-  <% end %>
-</table>
+  <div class="row">
+    <%= render 'shared/settings' %>
+  </div>
 
-<div style="margin-top:40px">
-  Version 1.0
+  <%= render 'shared/copyright' %>
 </div>
+

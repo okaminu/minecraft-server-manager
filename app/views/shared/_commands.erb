@@ -1,0 +1,13 @@
+<div class="form-inline highlight col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-3 col-xs-offset-1">
+  <h3>Commands</h3>
+
+  <div class="form-group">
+    <%= button_to 'Stop', {controller: 'server', action: 'stop'}, class: 'btn btn-danger' %>
+  </div>
+  <div class="form-group">
+    <%= button_to 'Start', {controller: 'server', action: 'start'}, class: 'btn btn-success' %>
+  </div>
+  <div class="form-group">
+    <%= button_to 'Restart', {controller: 'server', action: 'restart'}, class: 'btn btn-warning' %>
+  </div>
+</div>
