@@ -5,6 +5,8 @@ development:
     editable_server_properties:
         - view-distance
         - difficulty
+    info_server_properties:
+        - motd
 production:
     property_file_location: '/srv/minecraft/blueskies/server.properties'
     server_name: 'minecraft_blueskies'
@@ -12,3 +14,5 @@ production:
     editable_server_properties:
         - view-distance
         - difficulty
+    info_server_properties:
+        - motd

@@ -2,12 +2,14 @@ class ControlPanelController < ApplicationController
 
   def initialize
     @editable_properties = APP_CONFIG['editable_server_properties'].map{|x| x.to_sym}
+    @info_properties = APP_CONFIG['info_server_properties'].map{|x| x.to_sym}
     @properties_service = Properties.new(APP_CONFIG['property_file_location'])
     super
   end
 
   def show
     @properties_view = @properties_service.read_server_properties.slice(*@editable_properties)
+    @server_info = get_server_info
   end
 
   def save
@@ -21,6 +23,10 @@ class ControlPanelController < ApplicationController
 
   def restart_server
     Server.new(APP_CONFIG['server_name'], APP_CONFIG['restart_duration_in_seconds']).restart
+  end
+
+  def get_server_info
+    @properties_service.read_server_properties.slice(*@info_properties)
   end
 
 end
