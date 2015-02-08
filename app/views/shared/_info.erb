@@ -7,7 +7,11 @@
   </div>
   <div class="row">
     <div class="col-md-3 col-sm-3 col-xs-3"><strong>Status:</strong></div>
-    <div class="col-md-2 col-sm-2 col-xs-2 text-success">Running</div>
+    <% if @server_info[:is_active] %>
+        <div class="col-md-2 col-sm-2 col-xs-2 text-success">Running</div>
+    <% else %>
+        <div class="col-md-2 col-sm-2 col-xs-2 text-danger">Inactive</div>
+    <% end %>
   </div>
   <div class="row">
     <div class="col-md-3 col-sm-3 col-xs-3"><strong>Version:</strong></div>

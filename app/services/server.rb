@@ -12,11 +12,31 @@ class Server
   end
 
   def start
-    system 'systemctl start '+@server_name
+    `systemctl start #{@server_name}`
   end
 
   def stop
-    system 'systemctl stop '+@server_name
+    `systemctl stop #{@server_name}`
+  end
+
+  def is_active
+    status = `systemctl status #{@server_name}`
+
+    if status
+      is_running_match status
+    end
+
+    false
+  end
+
+  private
+
+  def is_running_match status
+    m = status.match 'active \(running\)'
+    if m
+      true
+    end
+    false
   end
 
 end
