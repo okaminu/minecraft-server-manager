@@ -23,7 +23,7 @@ class Server
     status = `systemctl status #{@server_name}`
 
     if status
-      is_running_match status
+      return is_running_match status
     end
 
     false
@@ -34,7 +34,7 @@ class Server
   def is_running_match status
     m = status.match 'active \(running\)'
     if m
-      true
+      return true
     end
     false
   end
