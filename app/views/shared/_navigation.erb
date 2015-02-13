@@ -1,0 +1,10 @@
+<div class="form-inline highlight col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-3 col-xs-offset-1">
+  <h3>Navigation</h3>
+  <div class="list-group">
+    <% APP_CONFIG['servers'].each do |propertyValue| %>
+        <div class="list-group-item <% if propertyValue == params[:server_name] %> disabled <% end %>">
+          <%= link_to propertyValue, "/control_panel/show/#{propertyValue}" %>
+        </div>
+    <% end %>
+  </div>
+</div>
