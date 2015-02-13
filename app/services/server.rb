@@ -1,6 +1,6 @@
 class Server
 
-  def initialize(server_name, restart_duration)
+  def initialize(restart_duration, server_name)
     @server_name = server_name
     @restart_duration = restart_duration
   end
