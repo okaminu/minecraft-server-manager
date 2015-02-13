@@ -1,18 +1,24 @@
 development:
-    property_file_location: '/Users/mac/Desktop/Aurimas/minecraft/server.properties'
-    server_name: 'minecraft_blueskies'
+    server_root: '/Users/mac/Desktop/Aurimas/minecraft'
+    servers:
+        - blueskies
+        - greenfields
     restart_duration_in_seconds: 3
     editable_server_properties:
         - view-distance
         - difficulty
     info_server_properties:
         - motd
+        - version
 production:
-    property_file_location: '/srv/minecraft/blueskies/server.properties'
-    server_name: 'minecraft_blueskies'
+    server_root: '/srv/minecraft'
+    servers:
+        - blueskies
+        - greenfields
     restart_duration_in_seconds: 3
     editable_server_properties:
         - view-distance
         - difficulty
     info_server_properties:
         - motd
+        - version

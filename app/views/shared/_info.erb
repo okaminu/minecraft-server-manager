@@ -15,10 +15,10 @@
   </div>
   <div class="row">
     <div class="col-md-3 col-sm-3 col-xs-3"><strong>Version:</strong></div>
-    <div class="col-md-2 col-sm-2 col-xs-2">1.8.1</div>
+    <div class="col-md-2 col-sm-2 col-xs-2"><%= @server_info[:version] %></div>
   </div>
   <div class="row">
     <div class="col-md-3 col-sm-3 col-xs-3"><strong>Logo:</strong></div>
-    <div class="col-md-2 col-sm-2 col-xs-2"><%= image_tag 'server-icon.png' %></div>
+    <div class="col-md-2 col-sm-2 col-xs-2"><%= image_tag "#{params[:server_name]}.png" %></div>
   </div>
 </div>

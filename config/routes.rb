@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  get '/control_panel/show'
-  post '/control_panel/save'
-  post '/server/stop'
-  post '/server/start'
-  post '/server/restart'
+  get '/control_panel/show/:server_name' => 'control_panel#show'
+  post '/control_panel/save/:server_name' => 'control_panel#save'
+  post '/server/stop/:server_name' => 'server#stop'
+  post '/server/start/:server_name' => 'server#start'
+  post '/server/restart/:server_name' => 'server#restart'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'control_panel#show'
+  root 'control_panel#show', :defaults => { :server_name => "blueskies" }
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

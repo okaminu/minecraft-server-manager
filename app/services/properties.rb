@@ -1,15 +1,17 @@
 class Properties
 
-  def initialize(location)
-    @server_properties_location = location
+  def initialize(server_root)
+    @server_root = server_root
   end
 
-  def read_server_properties
-    JavaProperties.load @server_properties_location
+  def read_server_properties(server_name)
+    full_path = "#{@server_root}/#{server_name}/server.properties"
+    JavaProperties.load full_path
   end
 
-  def save_server_properties(properties)
-    JavaProperties.write properties, @server_properties_location
+  def save_server_properties(properties, server_name)
+    full_path = "#{@server_root}/#{server_name}/server.properties"
+    JavaProperties.write properties, full_path
   end
 
 end

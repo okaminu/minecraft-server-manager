@@ -12,15 +12,15 @@ class Server
   end
 
   def start
-    `systemctl start #{@server_name}`
+    `systemctl start minecraft_#{@server_name}`
   end
 
   def stop
-    `systemctl stop #{@server_name}`
+    `systemctl stop minecraft_#{@server_name}`
   end
 
   def is_active
-    status = `systemctl status #{@server_name}`
+    status = `systemctl status minecraft_#{@server_name}`
 
     if status
       return is_running_match status
