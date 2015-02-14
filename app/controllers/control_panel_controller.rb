@@ -12,6 +12,10 @@ class ControlPanelController < ApplicationController
   end
 
   def save
+
+    unless is_valid
+      return redirect_to_default
+    end
     updated_properties = get_property_service.read_server_properties.deep_merge(params.symbolize_keys)
     get_property_service.save_server_properties(updated_properties)
     get_server.restart
@@ -19,6 +23,13 @@ class ControlPanelController < ApplicationController
   end
 
   private
+
+  def is_valid
+    if params[:server_name] == 'blueskies' and params[:difficulty].to_i == 0
+      return false
+    end
+    true
+  end
 
   def get_server_info
     server_properties = get_property_service.read_server_properties.slice(*@info_properties)
