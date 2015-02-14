@@ -17,14 +17,16 @@ class ServerController < ApplicationController
 
   def backup
     get_server.stop
-    `zip -r minecraft_server_backup.zip /srv/minecraft/#{params[:server_name]}`
-    `aws s3 cp minecraft_server_backup.zip s3://aurimasdegutis/Archive/Minecraft\\ Server\\ Backups/minecraft_server_#{params[:server_name]}_#{Time.now.strftime("%Y_%m_%d")}.zip`
-    `rm minecraft_server_backup.zip`
+    get_archiver.backup params[:server_name]
     get_server.start
     redirect_to_default
   end
 
   private
+
+  def get_archiver
+    Archiver.new(APP_CONFIG['server_root'], APP_CONFIG['s3_archive_location'])
+  end
 
   def get_server
     Server.new(APP_CONFIG['restart_duration_in_seconds'], params[:server_name])
