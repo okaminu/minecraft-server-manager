@@ -1,5 +1,8 @@
 development:
     server_root: '/Users/mac/Desktop/Aurimas/minecraft'
+    authentication:
+        username: 'minecraft'
+        password: 'triPolis2015'
     servers:
         - blueskies
         - greenfields
@@ -10,8 +13,12 @@ development:
     info_server_properties:
         - motd
         - version
+
 production:
     server_root: '/srv/minecraft'
+    authentication:
+            username: 'minecraft'
+            password: 'triPolis2015'
     servers:
         - blueskies
         - greenfields
