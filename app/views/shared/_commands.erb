@@ -10,4 +10,7 @@
   <div class="form-group">
     <%= button_to 'Restart', {controller: 'server', action: 'restart'}, class: 'btn btn-warning' %>
   </div>
+  <div class="form-group form-horizontal spacer">
+    <%= button_to 'Backup', {controller: 'server', action: 'backup'}, data:{confirm:'Are you sure you want to backup?'}, class: 'btn btn-info' %>
+  </div>
 </div>
