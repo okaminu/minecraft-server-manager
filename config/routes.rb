@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post '/server/stop/:server_name' => 'server#stop'
   post '/server/start/:server_name' => 'server#start'
   post '/server/restart/:server_name' => 'server#restart'
+  post '/server/backup/:server_name' => 'server#backup'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
