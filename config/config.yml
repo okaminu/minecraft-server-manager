@@ -1,6 +1,6 @@
 development:
     server_root: '/Users/mac/Desktop/Aurimas/minecraft'
-    s3_archive_location: 'aurimasdegutis/Archive/Minecraft Server Backups'
+    s3_archive_location: 'aurimasdegutis/Archive/Minecraft\ Server\ Backups'
     authentication:
         username: 'minecraft'
         password: 'triPolis2015'
@@ -17,6 +17,7 @@ development:
 
 production:
     server_root: '/srv/minecraft'
+    s3_archive_location: 'aurimasdegutis/Archive/Minecraft\ Server\ Backups'
     authentication:
             username: 'minecraft'
             password: 'triPolis2015'
