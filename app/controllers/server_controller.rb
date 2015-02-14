@@ -20,6 +20,7 @@ class ServerController < ApplicationController
     `zip -r minecraft_server_backup.zip /srv/minecraft/#{params[:server_name]}`
     `aws s3 cp minecraft_server_backup.zip s3://aurimasdegutis/Archive/Minecraft\\ Server\\ Backups/minecraft_server_#{params[:server_name]}_#{Time.now.strftime("%Y_%m_%d")}.zip`
     `rm minecraft_server_backup.zip`
+    get_server.start
     redirect_to_default
   end
 
