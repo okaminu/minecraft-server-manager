@@ -11,10 +11,11 @@ Done
 3) show the status of the server (running, stopped)
 4) change view-distance
 5) switch between servers
+6) Value validation, don't allow to select easy difficulty
 Todo
 1) password authentication
 2) allow to backup and send the backup to s3
-3) Value validation, don't allow to select easy difficulty
+
 
 ### How do I get set up? ###
 
