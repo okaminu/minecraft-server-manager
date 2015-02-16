@@ -29,7 +29,7 @@ class ServerController < ApplicationController
   end
 
   def get_server
-    Server.new(APP_CONFIG['restart_duration_in_seconds'], params[:server_name])
+    Server.new(params[:server_name])
   end
 
 end

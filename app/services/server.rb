@@ -1,14 +1,7 @@
 class Server
 
-  def initialize(restart_duration, server_name)
+  def initialize(server_name)
     @server_name = server_name
-    @restart_duration = restart_duration
-  end
-
-  def restart
-    stop
-    sleep @restart_duration
-    start
   end
 
   def start
@@ -17,6 +10,10 @@ class Server
 
   def stop
     `systemctl stop minecraft_#{@server_name}`
+    end
+
+  def restart
+    `systemctl restart minecraft_#{@server_name}`
   end
 
   def is_active

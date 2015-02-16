@@ -7,7 +7,6 @@ development:
     servers:
         - blueskies
         - greenfields
-    restart_duration_in_seconds: 3
     editable_server_properties:
         - view-distance
         - difficulty
@@ -24,7 +23,6 @@ production:
     servers:
         - blueskies
         - greenfields
-    restart_duration_in_seconds: 3
     editable_server_properties:
         - view-distance
         - difficulty
