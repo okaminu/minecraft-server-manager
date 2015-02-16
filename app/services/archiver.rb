@@ -8,7 +8,7 @@ class Archiver
 
   def backup(server_name)
     compress server_name
-    upload
+    upload server_name
     remove
   end
 
@@ -18,7 +18,7 @@ class Archiver
     `zip -r #{@archive_name} #{@server_root}/#{server_name}`
   end
 
-  def upload
+  def upload(server_name)
     `aws s3 cp #{@archive_name} s3://#{@s3_archive_location}/minecraft_server_#{server_name}_#{Time.now.strftime("%Y_%m_%d")}.zip`
   end
 
