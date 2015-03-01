@@ -11,6 +11,7 @@ development:
         - view-distance
         - difficulty
     info_server_properties:
+        - server-port
         - motd
         - version
 
@@ -27,5 +28,6 @@ production:
         - view-distance
         - difficulty
     info_server_properties:
+        - server-port
         - motd
         - version
