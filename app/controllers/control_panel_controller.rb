@@ -13,7 +13,7 @@ class ControlPanelController < ApplicationController
 
   def save
 
-    unless is_valid
+    unless is_blueskies_valid
       return redirect_to_default
     end
     updated_properties = get_property_service.read_server_properties.deep_merge(params.symbolize_keys)
@@ -24,10 +24,12 @@ class ControlPanelController < ApplicationController
 
   private
 
-  def is_valid
-    if params[:server_name] == 'blueskies' and params[:difficulty].to_i == 0
+  def is_blueskies_valid
+    validator = get_property_validator
+    if params[:server_name] == 'blueskies' and (validator.difficulty_too_low or validator.view_distance_too_high)
       return false
     end
+
     true
   end
 
@@ -42,6 +44,10 @@ class ControlPanelController < ApplicationController
 
   def get_property_service
     Properties.new(APP_CONFIG['server_root'], params[:server_name])
+  end
+
+  def get_property_validator
+    Validator.new(params)
   end
 
 end
