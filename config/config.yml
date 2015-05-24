@@ -10,7 +10,6 @@ development:
     editable_server_properties:
         - view-distance
         - difficulty
-        - network-compression-threshold
     info_server_properties:
         - server-port
         - motd
@@ -28,7 +27,6 @@ production:
     editable_server_properties:
         - view-distance
         - difficulty
-        - network-compression-threshold
     info_server_properties:
         - server-port
         - motd
