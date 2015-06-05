@@ -12,11 +12,4 @@ class Validator
     false
   end
 
-  def view_distance_too_high
-    if @params[:'view-distance'].to_i > 18
-      return true
-    end
-
-    false
-  end
 end

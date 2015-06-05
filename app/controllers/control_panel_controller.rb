@@ -26,7 +26,7 @@ class ControlPanelController < ApplicationController
 
   def is_blueskies_valid
     validator = get_property_validator
-    if params[:server_name] == 'blueskies' and (validator.difficulty_too_low or validator.view_distance_too_high)
+    if params[:server_name] == 'blueskies' and (validator.difficulty_too_low)
       return false
     end
 
