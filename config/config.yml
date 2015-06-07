@@ -3,7 +3,7 @@ development:
     s3_archive_location: 'aurimasdegutis/Archive/Minecraft\ Server\ Backups'
     authentication:
         username: 'minecraft'
-        password: 'triPolis2015'
+        password: 'jenSar2015'
     servers:
         - blueskies
         - greenfields
@@ -20,7 +20,7 @@ production:
     s3_archive_location: 'aurimasdegutis/Archive/Minecraft\ Server\ Backups'
     authentication:
             username: 'minecraft'
-            password: 'triPolis2015'
+            password: 'jenSar2015'
     servers:
         - blueskies
         - greenfields
